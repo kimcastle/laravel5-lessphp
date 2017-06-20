@@ -92,7 +92,7 @@ class Less
             return false; // This instance is already recompiled. Recompile a new or the same instance using Less::fresh()
         }
         if (is_null($recompile)) {
-            $recompile = env('LESS_RECOMPILE', self::RECOMPILE_ALWAYS);
+            $recompile = config('less.less_recompile', self::RECOMPILE_ALWAYS);
         }
         $this->recompiled = false; // Default value
         switch($recompile) {
