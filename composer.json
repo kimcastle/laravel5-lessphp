@@ -1,0 +1,22 @@
+{
+    "name": "kimcastle/laravel5-lessphp",
+    "description": "Bringing lessphp into Laravel",
+	"keywords": ["laravel","less", "php"],
+	"license": "MIT",
+    "authors": [
+        {
+            "name": "kimcastle",
+            "email": "kim@mixmedia.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "oyejorge/less.php": "~1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kimcastle\\Laravel5Less\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
