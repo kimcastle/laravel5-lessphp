@@ -75,7 +75,6 @@ class Less
      * Clean cache
      */
     protected function cleanCache() {
-        \Less_Cache::$gc_lifetime = 2; // Inchangeable?
         \Less_Cache::CleanCache();
     }
 
@@ -198,7 +197,8 @@ class Less
         if ($auto_recompile) {
             $recompiled = $this->recompile($filename, null, $options);
         }
-        $css_path = $this->config->get('less.link_path', '/css') . '/' . $filename . '.css';
+        $config = $this->prepareConfig($options);
+        $css_path = $config['link_path'] . '/' . $filename . '.css';
         return asset($css_path);
     }
 }
